@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "AuthorsList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Partial("_Advert_Partial_View");
+<h1 class="text-center">Authors List</h1>
+<div>
+    <table border="5" class="table menucolor table-striped ">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Sex</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>State</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Author in Model)
+            {
+                <tr>
+                    <td>@Author.Au_ID</td>
+                    <td>@Author.Au_Name</td>
+                    <td>@Author.Sex</td>
+                    <td>@Author.Phone</td>
+                    <td>@Author.Address</td>
+                    <td>@Author.City</td>
+                    <td>@Author.State</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="Create" class="btn btn-secondary">Add Author</a>
+</div>
+

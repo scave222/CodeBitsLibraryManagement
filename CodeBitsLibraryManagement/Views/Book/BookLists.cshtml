@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "BookLists";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Html.Partial("_Advert_Partial_View");
+    <partial href="~/Views/Shared/_Advert_Partial_View"></partial>
+<h1 class="text-center">BookLists</h1>
+
+<div>
+    <table border="5" class="table menucolor table-striped ">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Author ID</th>
+                <th>Publisher ID</th>
+                <th>Date of publish</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Book in Model)
+            {
+                <tr>
+                    <td>@Book.Book_ID</td>
+                    <td>@Book.Book_Name</td>
+                    <td>&#8358;@Book.Price</td>
+                    <td>@Book.Au_ID</td>
+                    <td>@Book.Pub_ID</td>
+                    <td>@Book.Dt_Of_Publish</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="Create" class="btn btn-secondary">Add Book</a>
+</div>
+

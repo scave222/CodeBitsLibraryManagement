@@ -1,0 +1,55 @@
+﻿body {
+    height: 100%;
+    background-color:darkcyan;
+}
+
+ul.list {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    color: white;
+}
+
+    ul.list li a {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 100px;
+        text-align: center;
+        color: #fff;
+        padding: 5px;
+    }
+
+    ul.list li {
+        margin-right: 3px;
+    }
+
+        ul.list li a.fa.fa-facebook {
+            background-color: blue;
+        }
+
+        ul.list li a.fa.fa-twitter {
+            background-color: skyblue;
+        }
+
+        ul.list li a.fa.fa-google-plus {
+            background-color: red;
+        }
+
+        ul.list li a.fa.fa-pinterest-p {
+            background-color: pink;
+        }
+
+
+
+
+.d-block {
+    height: 400px;
+}
+
+
+.pacifico {
+    font-family: 'Pacifico', cursive;
+}

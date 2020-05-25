@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "PublisherLists";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Partial("_Advert_Partial_View")
+<h1 class="text-center">Publisher Lists</h1>
+
+<div>
+
+    <table border="5" class="table menucolor table-striped ">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var Pub in Model)
+            {
+                <tr>
+                    <td>@Pub.Pub_ID</td>
+                    <td>@Pub.Pub_Name</td>
+                    <td>@Pub.Phone</td>
+                    <td>@Pub.Address</td>
+                    <td>@Pub.City</td>
+                    <td>@Pub.State</td>
+                    <td>@Pub.Country</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="Create" class="btn btn-secondary">Add Publisher</a>
+</div>
+
